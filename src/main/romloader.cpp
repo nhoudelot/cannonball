@@ -57,7 +57,7 @@ int RomLoader::load(const char* filename, const int offset, const int length, co
     chdir(bundlepath);
 #endif
 
-    std::string path = "roms/";
+    std::string path = "/usr/share/games/cannonball/rom/";
     path += std::string(filename);
 
     // Open rom file
