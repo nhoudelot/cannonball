@@ -39,13 +39,13 @@ bool OMusic::load_widescreen_map()
     if (tilemap == NULL)
     {
         tilemap = new RomLoader();
-        status += tilemap->load_binary("res/tilemap.bin");
+        status += tilemap->load_binary("/usr/share/games/cannonball/res/tilemap.bin");
     }
 
     if (tile_patch == NULL)
     {
         tile_patch = new RomLoader();
-        status += tile_patch->load_binary("res/tilepatch.bin");
+        status += tile_patch->load_binary("/usr/share/games/cannonball/res/tilepatch.bin");
     }
 
     return status == 0;
