@@ -3,6 +3,8 @@
 set(lib_base /usr/include)
 set(sdl_root ${lib_base}/SDL)
 
+set_target_properties(sdl PROPERTIES SKIP_BUILD_RPATH TRUE)
+
 include_directories("${sdl_root}")
 
 link_libraries(cannonball 
