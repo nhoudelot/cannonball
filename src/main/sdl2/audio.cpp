@@ -75,11 +75,11 @@ void Audio::start_audio()
 
 	    if (SDL_InitSubSystem(SDL_INIT_AUDIO)!=0) {
 
-		std::cout << "Error initalizing audio subsystem: " << SDL_GetError() << std::endl;
+		std::cout << "Error initializing audio subsystem: " << SDL_GetError() << std::endl;
 	    }
 
 	    if (SDL_AudioInit("alsa")!=0) {
-		std::cout << "Error initalizing audio using ALSA: " << SDL_GetError() << std::endl;
+		std::cout << "Error initializing audio using ALSA: " << SDL_GetError() << std::endl;
 		return;
 	    }
 
@@ -87,7 +87,7 @@ void Audio::start_audio()
 	else {
 	    if(SDL_Init(SDL_INIT_AUDIO) == -1) 
 	    {
-		std::cout << "Error initalizing audio: " << SDL_GetError() << std::endl;
+		std::cout << "Error initializing audio: " << SDL_GetError() << std::endl;
 		return;
 	    }		
 	}
@@ -111,7 +111,7 @@ void Audio::start_audio()
         }
 
         if (desired.samples != obtained.samples) {
-            std::cout << "Error initalizing audio: number of samples not supported." << std::endl
+            std::cout << "Error initializing audio: number of samples not supported." << std::endl
                       << "Please compare desired vs obtained. Look at what audio driver SDL2 is using." << std::endl;
 	    return;
 	}

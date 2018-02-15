@@ -61,7 +61,7 @@ void Audio::start_audio()
     {
         if(SDL_Init(SDL_INIT_AUDIO) == -1) 
         {
-            std::cout << "Error initalizing audio: " << SDL_GetError() << std::endl;
+            std::cout << "Error initializing audio: " << SDL_GetError() << std::endl;
             return;
         }
 
@@ -77,13 +77,13 @@ void Audio::start_audio()
 
         if (SDL_OpenAudio(&desired, &obtained) == -1)
         {
-            std::cout << "Error initalizing audio: " << SDL_GetError() << std::endl;
+            std::cout << "Error initializing audio: " << SDL_GetError() << std::endl;
             return;
         }
 
         if (desired.samples != obtained.samples)
         {
-            std::cout << "Error initalizing audio: sample rate not supported." << std::endl;
+            std::cout << "Error initializing audio: sample rate not supported." << std::endl;
             return;
         }
 
